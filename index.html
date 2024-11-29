@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Card</title>
+</head>
+<style>
+    th , td {
+        padding: 10px 20px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <h1>Result Card</h1>
+
+
+
+ <label for="phyTotalMarks">
+     Total Number Of Physics: <input type="number" id="phyTotalMarks">
+ </label>
+ <br>
+ <label for="phyObtainedMarks">
+     Obtained Number Of Physics: <input type="number" id="phyObtainedMarks">
+ </label>
+ <br>
+ <label for="chmTotalMarks">
+     Total Number Of Chemistry: <input type="number" id="chmTotalMarks">
+ </label>
+ <br>
+ <label for="chmObtainedMarks">
+     Obtained Number Of Chemistry: <input type="number" id="chmObtainedMarks">
+ </label>
+ <br>
+ <label for="mathTotalMarks">
+     Total Number Of Math: <input type="number" id="mathTotalMarks">
+ </label>
+ <br>
+ <label for="mathObtainedMarks">
+     Obtained Number Of Math: <input type="number" id="mathObtainedMarks">
+ </label>
+ <br>
+
+ <button onclick="check()">Check</button>
+ <div class="card">
+     <Table>
+         <tr>
+             <th>Subject</th>
+             <th>Total Number</th>
+             <th>Obtained</th>
+             <th>Grade</th>
+             <th>percentage</th>
+         </tr>
+         <tr>
+             <th>Physics:</th>
+             <td id="phyTotal"></td>
+             <td id="phyObtained"></td>
+             <td id="phypercentage"></td>
+             <td id="phygrade"></td>
+           
+         </tr>
+         <tr>
+             <th>Chemistry:</th>
+             <td id="chmTotal"></td>
+             <td id="chmObtained"></td>
+             <td id="chmspercentage"></td>
+             <td id="chmsgrade"></td>
+         </tr>
+         <tr>
+             <th>Math:</th>
+             <td id="mthTotal"></td>
+             <td id="mthObtained"></td>
+             <td id="mathpercentage"></td>
+             <td id="mathgrade"></td>
+         </tr>
+        
+         <tr>
+ 
+             <td>Total Mark:</td>
+             <td id="Total"></td>
+             <td id="Obtain"></td>
+             <td id="percentage"></td>
+             <td id="Grade"></td>
+         </tr>
+        
+     </Table>
+
+    
+ </div>
+  <script>
+    function check()
+  {
+      let totalNumPhy = Number(document.getElementById("phyTotalMarks").value);
+      let obtNumPhy = Number(document.getElementById("phyObtainedMarks").value);
+      let percentage_of_physics = (obtNumPhy/totalNumPhy)*100;
+      let totalNumChms = Number(document.getElementById("chmTotalMarks").value);
+      let totalNumChms = Number(document.getElementById("chmObtainedMarks").value);
+      let totalNumMath = Number(document.getElementById("mathTotalMarks").value);
+      let totalNumMath = Number(document.getElementById("mathObtainedMarks").value);
+      
+
+      document.getElementById("phyTotal").innerText = totalNumPhy;
+      document.getElementById("phyObtained").innerText = obtNumPhy;
+      document.getElementById("phypercentage").innerText = percentage_of_physics;
+  }
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
